@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yıldız FC</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+    color: #eee;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    background: #2e2e2e;
+    padding: 10px 20px;
+    gap: 15px;
+  }
+  header img {
+    height: 200px;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px 5px #000; 
+  }
+  nav {
+    witdh: 100%;
+    background: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+  }
+  nav button {
+    background: none;
+    border: none;
+    color: #eee;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 20px; 
+  }
+  nav button:hover, nav button.active {
+    background: #ffcc00;
+    color: #111;
+    font-weight: 700;
+    box-shadow: 0 0 10px #ffcc00;
+  }
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px 40px;
+  }
+  .about {
+    background: #3a3a3a;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .players, .sponsors {
+    display: none;
+    margin-top: 20px;
+  }
+  .players.active, .sponsors.active {
+    display: block;
+  }
+  .player-card {
+    display: flex;
+    align-items: center;
+    background: #3a3a3a;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    padding: 25px;
+    gap: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  .player-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ffcc00;
+  }
+  .player-info {
+    flex: 1;
+  }
+  .player-info h3 {
+    margin: 0 0 10px;
+    color: #ffcc00;
+  }
+  .player-info p {
+    margin: 0;
+  }
+  .sponsors ul {
+    color: #eee;
+    list-style: disc inside;
+    padding-left: 0;
+  }
+  footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 600px) {
+    .player-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .player-card img {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="Yıldız FC Logo" />
+  <h1>YILDIZ FC</h1>
+</header>
+
+<nav>
+  <button id="aboutBtn" class="active">Kulüp Hakkında</button>
+  <button id="playersBtn">Oyuncular</button>
+  <button id="sponsorsBtn">Sponsorlar</button>
+</nav>
+
+<main>
+  <section id="about" class="about active">
+    <p><strong>YILDIZ FC Spor Kulübü</strong>, 2025 yılında kurulmuş ve dünyanın en iyi futbol kulüpleri arasında adını altın harflerle yazmış bir futbol kulübüdür. Beş kişilik kadrosuyla dünyaya korku salmaktadır. Penci Zorno sponsorluğuyla birlikte dünyada adından sıkça bahsettirmektedir. Aynı zamanda dünyanın en iyi futbol kulübü olma yolunda hızla ilerlemektedir. </p>
+  </section>
+
+  <section id="players" class="players">
+    <div class="player-card">
+      <img src="ensar.jpg" alt="Ensar Yıldız" />
+      <div class="player-info">
+        <h3>Ensar YILDIZ (#6)</h3>
+        <p>Dünyanın en iyi defansı ve gizli forveti olabilecek kapasitedeki bir futbolcudur. Ayıcığına gösterdiği özel ilgi ve şevkat ona başarıyı getirmiştir. Maç esnasında kendine hediye olarak atılan bir ayıcık sayesinde karşı rakibin tüm forvet hattını inanılmaz gücüyle durdurabilecek bir kabiliyete sahiptir. Lazer makinalarını gebe bıraktığı rivayetler arasındadır. 36 çıkışlı egzoza sahip çakal kasa CG ile kızların da gözdesidir. İşte bu kadar taşşaklı bir futbolcudur.</p>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <img src="ridvan.jpg" alt="Rıdvan Yıldız" />
+      <div class="player-info">
+        <h3>Rıdvan YILDIZ (#4)</h3>
+        <p>Kendisi mevkidaşı gibi dünyanın en iyi defansı olma özelliğini göstermektedir. Çok kaliteli bir defans ve rakibin korkulu rüyasıdır. Meyve suyu en büyük enerji kaynağı ve motivasyon kaynağıdır. En büyük hobisi de arabaya kız atıp piyasa yapmakdır. Bir rivayete göre kendisi, Maradona'nın futbolu bırakmasındaki en büyük etkendir. Yaptığı elektrik devreleri ile yılın mucidi olan tek futbolcusu olma ünvanına da sahip olduğunu unutmayın. İşte bu kadar taşşaklı bir futbolcudur.</p>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <img src="nurullah.jpg" alt="Nurullah Yıldız" />
+      <div class="player-info">
+        <h3>Nurullah YILDIZ (#7)</h3>
+        <p>Dünyanın en iyi forvet ve sol açık olma özelliğini taşımaktadır. Protheme adında bir sevgilisi bulunmaktadır. Onun stadyumda tezahüratını gördüğü an kendisini kaybederek tüm rakip defans hattının korkulu rüyası olmaktadır. 1000CC motoruyla otoban katili olma özelliğini taşır. Takım arkadaşlarıyla yaptığı manken partisi en büyük hobisidir. Bir rivayete göre Cristiano Ronaldo kendisinden korktuğu için Arabistan'a gitmeye karar vermiştir. İşte bu kadar taşşaklı bir futbolcudur.</p>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <img src="muta.jpg" alt="Muta Yıldız" />
+      <div class="player-info">
+        <h3>Muta YILDIZ (#11)</h3>
+        <p>Dünyanın en iyi sol açık ve kanat olma özelliğine sahiptir. Çalımları takdire şayandır. Maç öncesi gerçekleştirdiği 31 patlaması gücüyle beraber tüm oyunu domine etmektedir. Sevgilisi Sweete Fox sayesinde yaptıkları karşısında tüm dünya çaresiz kalır. Ama tekrardan dediğimiz gibi en büyük motivasyonu 31'dir. Gareth Bale en büyük idolüdür ama idolünü başarı konusunda futboldan silmiştir. Genç kızların sevgilisi olma özelliğini hiçbir zaman kaybetmemiştir. Bir rivayete göre driplinglerine dayanamayan Carles Puyol futbolu bırakmıştır. Aynı zamanda Puyol'u kendine hayran bırakarak gay olmasına sebep olmuştur. İşte bu kadar taşşaklı bir futbolcudur.</p>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <img src="salih.jpg" alt="Salih Yıldız" />
+      <div class="player-info">
+        <h3>Salih YILDIZ (#10)</h3>
+        <p>Dünyanın en iyi ofansif orta sahası ve sağ açığı olma özelliğine sahip bir futbolcudur. Ortaları fazlasıyla iyi ve kalitelidir. İnanılmaz derecede kaliteli yapay manken üretme gibi değişik bir özelliği bulunsa da bu özellikle birlikte yaşadığı özgüven ve motivasyon, onu dünyanın en iyi defansını bile zora sokacak bir kabiliyete sahip olmasını sağlamıştır. Kendisi maç öncesi, yaptığı mankenler sayesinde motivasyon kazanarak dünyanın en iyi sağ açığı olma unvanını taşımaktadır. Bir rivayete göre Oliver Kahn, plaselerine artık dayanamamış ve futbolu bırakmıştır. İşte bu kadar taşşaklı bir futbolcudur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="sponsors">
+    <h3 style="color: #ffcc00;">Sponsorlar</h3>
+    <ul id="sponsor-list">
+      <li>Penci Zorno</li>
+      <li>8Dak</li>
+      <li>PornBuh</li>
+         </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Yıldız FC Spor Kulübü. Tüm hakları saklıdır.
+</footer>
+
+<script>
+  const aboutBtn = document.getElementById('aboutBtn');
+  const playersBtn = document.getElementById('playersBtn');
+  const sponsorsBtn = document.getElementById('sponsorsBtn');
+  const aboutSection = document.getElementById('about');
+  const playersSection = document.getElementById('players');
+  const sponsorsSection = document.getElementById('sponsors');
+
+  aboutBtn.addEventListener('click', () => {
+    aboutSection.style.display = 'block';
+    playersSection.style.display = 'none';
+    sponsorsSection.style.display = 'none';
+    aboutBtn.classList.add('active');
+    playersBtn.classList.remove('active');
+    sponsorsBtn.classList.remove('active');
+  });
+
+  playersBtn.addEventListener('click', () => {
+    aboutSection.style.display = 'none';
+    playersSection.style.display = 'block';
+    sponsorsSection.style.display = 'none';
+    playersBtn.classList.add('active');
+    aboutBtn.classList.remove('active');
+    sponsorsBtn.classList.remove('active');
+  });
+
+  sponsorsBtn.addEventListener('click', () => {
+    aboutSection.style.display = 'none';
+    playersSection.style.display = 'none';
+    sponsorsSection.style.display = 'block';
+    sponsorsBtn.classList.add('active');
+    aboutBtn.classList.remove('active');
+    playersBtn.classList.remove('active');
+  });
+
+  // İlk açılışta sadece about gösterilsin
+  aboutSection.style.display = 'block';
+  playersSection.style.display = 'none';
+  sponsorsSection.style.display = 'none';
+</script>
+
+</body>
+</html>
